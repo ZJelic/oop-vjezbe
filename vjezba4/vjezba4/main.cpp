@@ -38,7 +38,6 @@ int main()
 	cout << endl;
 
 	for (int i = 0; i < igra.size(); i++) {
-
 		cout << igra[i].get_name() << " akuza: " << igra[i].get_bodovi() << endl;
 	}
 }
