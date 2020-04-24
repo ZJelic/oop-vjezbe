@@ -39,7 +39,6 @@ void Board::draw_up_line(Point dot, char ch) { // smjer ->
 	for (int i = 1; i <= y; i++)
 	{
 		matrica[x][i] = ch;
-
 	}
 }
 void Board::draw_line(Point dot1, Point dot2, char ch) {
