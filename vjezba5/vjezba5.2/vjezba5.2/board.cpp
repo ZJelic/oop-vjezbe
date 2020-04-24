@@ -76,30 +76,36 @@ void Board::draw_line(Point dot1, Point dot2, char ch) {
 	}
 }
 void Board::display() {
-	for (int i = 0; i < red; i++) {
-		if (i == 0) {
-			for (int x = 0; x < red+2; x++) {
-				cout << okvir;
-				cout << ' ';
+	{
+		for (int i = 0; i < red; i++) {
+			if (i == 0) {
+				int x = 0;
+				while (x < red+2) { //dva znaka dodatno
+					cout << okvir; //'o'
+					cout << ' ';
+					x++;
+				}
 			}
-		}
-		cout << "\n";
-		for (int j = 0; j < stupac; j++) {
-			if (j == 0) {
-				cout << okvir;
-			}
-			cout << ' ';
-			cout << matrica[i][j];
-			if (j == stupac -1 ) {
+			cout << endl;
+			for (int j = 0; j < stupac; j++) {
+				if (j == 0) {
+					cout << okvir; //'o'
+				}
 				cout << ' ';
-				cout << okvir;
+				cout << matrica[i][j];
+				if (j == stupac-1) {
+					cout << ' ';
+					cout << okvir; //'o'
+				}
 			}
-		}
-		cout << "\n";
-		if (i == red - 1) {
-			for (int x = 0; x < red + 2; x++) {
-				cout << okvir;
-				cout << ' ';
+			cout << endl;
+			if (i == red - 1) {
+				int x=0;
+				while (x < red+2) {
+					cout << okvir;
+					cout << ' ';
+					x++;
+				}
 			}
 		}
 	}
