@@ -37,7 +37,7 @@ void game::par_nepar()
 	cout << "Unesite ime 2:" << endl;
 	cin >> name;
 	p2->set_name(name);
-	cout << "Igrac broj 1 - par(1), nepar(0):" << endl;
+	cout << "Igrac broj 1 -> unesite 1 za par ili 0 za nepar:" << endl;
 	cin >> par;
 	if (par > 1) {
 		cout << "Error!";
@@ -59,7 +59,7 @@ void game::par_nepar()
 		score = p1->get_round() + p2->get_round();
 		if (score % 2 == 0) {
 			if (p1->get_par() == true)
-				p2->set_points(p1->get_points() + 1);
+				p1->set_points(p1->get_points() + 1);
 			else
 				p2->set_points(p2->get_points() + 1);
 		}
